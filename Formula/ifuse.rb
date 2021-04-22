@@ -21,7 +21,9 @@ class Ifuse < Formula
   depends_on "libplist"
 
   on_macos do
-    disable! date: "2021-04-08", because: "requires FUSE"
+    # disable! date: "2021-04-08", because: "requires FUSE"
+    deprecate! date: "2020-11-10", because: "requires FUSE"
+    depends_on :osxfuse
   end
 
   on_linux do
